@@ -51,7 +51,21 @@ public class PlayerMovement : MonoBehaviour {
     {
         if(collision.tag == "Package")
         {
+            Destroy(collision.gameObject);
+            hasPackage = true;
+            Debug.Log(hasPackage);
             Debug.Log("You have run into a package");
+        }
+
+        if(collision.tag == "Mailbox" && hasPackage)
+        {
+            Debug.Log("You have successfully delivered a package!!");
+            hasPackage = false;
+            Debug.Log(hasPackage);
+        }
+        else if(collision.tag == "Mailbox")
+        {
+            Debug.Log("You don't have the package!!!!!");
         }
     }
 }
