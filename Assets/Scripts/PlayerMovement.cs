@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour {
     public bool hasPackage = false;
 
     private GameObject gameController;
+    private Vector2 touchStart;
 
 	// Use this for initialization
 	void Start () {
@@ -23,7 +24,10 @@ public class PlayerMovement : MonoBehaviour {
 	void Update () {
 
         transform.position += currentDirection * speed * Time.deltaTime;
-		
+
+        //PC inputs
+//#if UNITY_STANDALONE || UNITY_WEBPLAYER
+
         if (Input.GetKeyDown(KeyCode.W))
         {
             //Debug.Log("W is pressed go forward");
@@ -47,6 +51,48 @@ public class PlayerMovement : MonoBehaviour {
            //Debug.Log("A is pressed go left");
             currentDirection = -transform.right;
         }
+
+        //Inputs for mobile touch devices
+//#elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
+        if (Input.touchCount > 0)
+        {
+            Debug.Log("Touch is detected");
+            Touch myTouch = Input.touches[0];
+
+            if (myTouch.phase == TouchPhase.Began)
+            {
+                touchStart = myTouch.position;
+            }
+            else if(myTouch.phase == TouchPhase.Ended && touchStart.x >= 0)
+            {
+                Vector2 touchEnd = myTouch.position;
+
+                float x = touchEnd.x - touchStart.x;
+
+                float y = touchEnd.y - touchStart.y;
+
+                touchStart.x = -1;
+
+                if (Mathf.Abs(x) > Mathf.Abs(y))
+                {
+                    if (x > 0)
+                        currentDirection = transform.right;
+                    else
+                        currentDirection = -transform.right;
+                }
+                else
+                {
+                    if (y > 0)
+                        currentDirection = transform.up;
+                    else
+                        currentDirection = -transform.up;
+                }
+            }
+        }
+
+//#endif
+
+
 
     }
 
