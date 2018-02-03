@@ -11,9 +11,12 @@ public class PlayerMovement : MonoBehaviour {
     public GameObject package;
     public bool hasPackage = false;
 
+    private GameObject gameController;
+
 	// Use this for initialization
 	void Start () {
         currentDirection = transform.up;
+        gameController = GameObject.Find("GameController");
 	}
 	
 	// Update is called once per frame
@@ -60,6 +63,9 @@ public class PlayerMovement : MonoBehaviour {
         if(collision.tag == "Mailbox" && hasPackage)
         {
             Debug.Log("You have successfully delivered a package!!");
+            Debug.Log("Your new score is:");
+            gameController.GetComponent<GameController>().playerScore += 10;
+            Debug.Log(gameController.GetComponent<GameController>().playerScore);
             hasPackage = false;
             Debug.Log(hasPackage);
         }
