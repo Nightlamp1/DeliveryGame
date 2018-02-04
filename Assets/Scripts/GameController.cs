@@ -6,10 +6,13 @@ public class GameController : MonoBehaviour {
 
     public int playerScore = 0;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public static GameObject[] intersectionObjects;
+    private Vector3[] intersections;
+
+    // Use this for initialization
+    void Start () {
+        intersectionObjects = GameObject.FindGameObjectsWithTag("Intersection");
+    }
 	
 	// Update is called once per frame
 	void Update () {
