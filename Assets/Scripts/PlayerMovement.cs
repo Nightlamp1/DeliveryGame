@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-    public float speed = 0.5f;
-    public Vector3 currentDirection;
+    public float speed = 4f;
+    public Vector3 currentDirection; //will be retired
+    public Vector2 nextMovement;
+    public bool playerAtIntersection = false;
+    Rigidbody2D player;
 
     public Sprite testsprite;
     public GameObject package;
@@ -14,42 +17,48 @@ public class PlayerMovement : MonoBehaviour {
     private GameObject gameController;
     private Vector2 touchStart;
 
-	// Use this for initialization
-	void Start () {
-        currentDirection = transform.up;
+    public Transform Top, Left, Right, Bottom;
+    public bool canMoveUp, canMoveDown, canMoveLeft, canMoveRight;
+
+    // Use this for initialization
+    void Start () {
+        player = GetComponent<Rigidbody2D>();
+        player.velocity = new Vector2(0f, 1 * speed);
         gameController = GameObject.Find("GameController");
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
+        //Debug.Log(nextMovement);
+        CheckPossibleMovements();
+        playerAtIntersection = IsPlayerAtIntersection();
 
-        transform.position += currentDirection * speed * Time.deltaTime;
+        if (playerAtIntersection)
+        {
+            //player.velocity = nextMovement;
+        }
 
         //PC inputs
 //#if UNITY_STANDALONE || UNITY_WEBPLAYER
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            //Debug.Log("W is pressed go forward");
-            currentDirection = transform.up;
+            player.velocity = Vector2.up * speed;
         }
 
         if (Input.GetKeyDown(KeyCode.S))
         {
-           //Debug.Log("S is pressed go down");
-            currentDirection = -transform.up;
+            player.velocity = Vector2.up * -speed;
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
-            //Debug.Log("D is pressed go right");
-            currentDirection = transform.right;
+            player.velocity = Vector2.right * speed;
         }
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-           //Debug.Log("A is pressed go left");
-            currentDirection = -transform.right;
+            player.velocity = Vector2.right * -speed;  
         }
 
         //Inputs for mobile touch devices
@@ -119,5 +128,49 @@ public class PlayerMovement : MonoBehaviour {
         {
             Debug.Log("You don't have the package!!!!!");
         }
+    }
+
+    bool IsPlayerAtIntersection()
+    {
+        foreach (GameObject intersect in GameController.intersectionObjects)
+        {
+            Debug.Log(Vector3.Distance(intersect.transform.position, transform.position));
+            if (Vector3.Distance(intersect.transform.position, transform.position) < 1.03)
+                return true;
+        }
+        return false;
+    }
+
+    void CheckPossibleMovements()
+    {
+        RaycastHit2D upDirectionHit = Physics2D.Raycast(Top.position, Vector2.up, 0.7f);
+        RaycastHit2D leftDirectionHit = Physics2D.Raycast(Left.position, -Vector2.right, 0.7f);
+        RaycastHit2D downDirectionHit = Physics2D.Raycast(Bottom.position, -Vector2.up, 0.7f);
+        RaycastHit2D rightDirectionHit = Physics2D.Raycast(Right.position, Vector2.right, 0.7f);
+
+        Debug.DrawRay(Top.position, transform.TransformDirection(Vector2.up) * 0.7f, Color.green);
+        Debug.DrawRay(Left.position, transform.TransformDirection(-Vector2.right) * 0.7f, Color.green);
+        Debug.DrawRay(Bottom.position, transform.TransformDirection(-Vector2.up) * 0.7f, Color.green);
+        Debug.DrawRay(Right.position, transform.TransformDirection(Vector2.right) * 0.7f, Color.green);
+
+        if (upDirectionHit.collider != null)
+            canMoveUp = false;
+        else
+            canMoveUp = true;
+
+        if (leftDirectionHit.collider != null)
+            canMoveLeft = false;
+        else
+            canMoveLeft = true;
+
+        if (downDirectionHit.collider != null)
+            canMoveDown = false;
+        else
+            canMoveDown = true;
+
+        if (rightDirectionHit.collider != null)
+            canMoveRight = false;
+        else
+            canMoveRight = true;
     }
 }

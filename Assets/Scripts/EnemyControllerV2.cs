@@ -79,73 +79,59 @@ public class EnemyControllerV2 : MonoBehaviour {
 
     void EnemyMove()
     {
-        Debug.Log("Gonna Move Soon");
         Transform targetTransform = targetPlayer.GetComponent<Transform>();
         Vector2 distanceToPlayer = transform.position - targetTransform.position;
-        Debug.Log(distanceToPlayer);
 
+        //Handling cases where player is further away in x direction than in y direction
         if(Mathf.Abs(distanceToPlayer.x) > Mathf.Abs(distanceToPlayer.y))
         {
-            Debug.Log("Would like to move left/right");
-            if(distanceToPlayer.x > 0 && canMoveLeft)
+            if (distanceToPlayer.x > 0 && canMoveLeft)
             {
-                Debug.Log("MOVING LEFT");
                 enemy.velocity = Vector2.right * -speed;
             }
-            else if(distanceToPlayer.x <= 0 && canMoveRight)
+            else if (distanceToPlayer.x <= 0 && canMoveRight)
             {
-                Debug.Log("MOVING RIGHT");
                 enemy.velocity = Vector2.right * speed;
             }
             else if (canMoveDown || canMoveUp)
             {
                 if (distanceToPlayer.y > 0 && canMoveDown)
                 {
-                    Debug.Log("MOVING Down but dont want to");
                     enemy.velocity = Vector2.up * -speed;
                 }
-                else if(canMoveUp)
+                else if (canMoveUp)
                 {
-                    Debug.Log("MOVING Up but dont want to");
                     enemy.velocity = Vector2.up * speed;
                 }
                 else
                 {
-                    Debug.Log("MOVING Down but dont want to");
                     enemy.velocity = Vector2.up * -speed;
                 }
-
             }
-
         }
+        //Handling cases where player is further away in y direction than in x direction
         else if(Mathf.Abs(distanceToPlayer.x) <= Mathf.Abs(distanceToPlayer.y))
         {
-            Debug.Log("Would like to move up/down");
             if (distanceToPlayer.y > 0 && canMoveDown)
             {
-                Debug.Log("MOVING Down");
                 enemy.velocity = Vector2.up * -speed;
             }
             else if (distanceToPlayer.y <= 0 && canMoveUp)
             {
-                Debug.Log("MOVING Up");
                 enemy.velocity = Vector2.up * speed;
             }
             else if (canMoveLeft || canMoveRight)
             {
                 if (distanceToPlayer.x > 0 && canMoveLeft)
                 {
-                    Debug.Log("MOVING LEFT but dont want to");
                     enemy.velocity = Vector2.right * -speed;
                 }
-                else if(canMoveRight)
+                else if (canMoveRight)
                 {
-                    Debug.Log("MOVING RIGHT but dont want to");
                     enemy.velocity = Vector2.right * speed;
                 }
                 else
                 {
-                    Debug.Log("MOVING LEFT but dont want to");
                     enemy.velocity = Vector2.right * -speed;
                 }
             }
