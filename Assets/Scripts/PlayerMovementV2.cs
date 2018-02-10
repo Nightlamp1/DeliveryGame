@@ -12,9 +12,11 @@ public class PlayerMovementV2 : MonoBehaviour
     public Rigidbody2D player;
     public float speed = 12f;
 
-    public bool upCheck, downCheck, leftCheck, rightCheck = false;
+    public bool canMoveUp, canMoveDown, canMoveLeft, canMoveRight = false;
     public bool moving = false;
     public Vector2 currentDirection;
+    public Transform leftTop, leftBot, rightTop, rightBot;
+    public Transform upLeft, upRight, downLeft, downRight;
 
     // Use this for initialization
     void Start()
@@ -64,6 +66,8 @@ public class PlayerMovementV2 : MonoBehaviour
             targetNode = FindTargetNode(currentDirection);
             currentNode = targetNode;
         }
+
+        CheckForValidMoveDirections();
     }
 
 
@@ -78,5 +82,63 @@ public class PlayerMovementV2 : MonoBehaviour
             
         }
         return currentNode;
+    }
+
+    void CheckForValidMoveDirections()
+    {
+        RaycastHit2D leftTopHit = Physics2D.Raycast(leftTop.position, Vector2.right, 1f);
+        RaycastHit2D leftBotHit = Physics2D.Raycast(leftBot.position, Vector2.right, 1f);
+        RaycastHit2D rightTopHit = Physics2D.Raycast(rightTop.position, -Vector2.right, 1f);
+        RaycastHit2D rightBotHit = Physics2D.Raycast(rightBot.position, -Vector2.right, 1f);
+
+        RaycastHit2D topLeftHit = Physics2D.Raycast(upLeft.position, -Vector2.up, 1f);
+        RaycastHit2D topRightHit = Physics2D.Raycast(upRight.position, -Vector2.up, 1f);
+        RaycastHit2D botLeftHit = Physics2D.Raycast(downLeft.position, Vector2.up, 1f);
+        RaycastHit2D botRightHit = Physics2D.Raycast(downRight.position, Vector2.up, 1f);
+
+        /*
+        Debug.DrawRay(leftTop.position, transform.TransformDirection(Vector2.right) * 1f, Color.green);
+        Debug.DrawRay(leftBot.position, transform.TransformDirection(Vector2.right) * 1f, Color.green);
+        Debug.DrawRay(rightTop.position, transform.TransformDirection(-Vector2.right) * 1f, Color.green);
+        Debug.DrawRay(rightBot.position, transform.TransformDirection(-Vector2.right) * 1f, Color.green);
+        */
+
+        if(leftTopHit.collider.tag == "Player" && leftBotHit.collider.tag == "Player")
+        {
+            canMoveLeft = true;
+        }
+        else if(leftTopHit.collider.tag == "Environment" || leftBotHit.collider.tag == "Environment")
+        {
+            canMoveLeft = false;
+        }
+
+        if (rightTopHit.collider.tag == "Player" && rightBotHit.collider.tag == "Player")
+        {
+            canMoveRight = true;
+        }
+        else if (rightTopHit.collider.tag == "Environment" || rightBotHit.collider.tag == "Environment")
+        {
+            canMoveRight = false;
+        }
+
+        if (topLeftHit.collider.tag == "Player" && topRightHit.collider.tag == "Player")
+        {
+            canMoveUp = true;
+        }
+        else if (topLeftHit.collider.tag == "Environment" || topRightHit.collider.tag == "Environment")
+        {
+            canMoveUp = false;
+        }
+
+        if (botLeftHit.collider.tag == "Player" && botRightHit.collider.tag == "Player")
+        {
+            canMoveDown = true;
+        }
+        else if (botLeftHit.collider.tag == "Environment" || botRightHit.collider.tag == "Environment")
+        {
+            canMoveDown = false;
+        }
+
+
     }
 }
