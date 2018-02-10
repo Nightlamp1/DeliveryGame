@@ -119,8 +119,8 @@ public class PlayerMovement : MonoBehaviour {
         {
             Debug.Log("You have successfully delivered a package!!");
             Debug.Log("Your new score is:");
-            gameController.GetComponent<GameController>().playerScore += 10;
-            Debug.Log(gameController.GetComponent<GameController>().playerScore);
+            //gameController.GetComponent<GameController>().playerScore += 10;
+            //Debug.Log(gameController.GetComponent<GameController>().playerScore);
             hasPackage = false;
             Debug.Log(hasPackage);
         }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
 
-    public int playerScore = 0;
+    public static int playerScore = 0;
 
     public static GameObject[] intersectionObjects;
     private Vector3[] intersections;

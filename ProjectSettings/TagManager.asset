@@ -4,11 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Package
   - Mailbox
   - Environment
   - Enemy
   - Intersection
+  - Envelope
   layers:
   - Default
   - TransparentFX

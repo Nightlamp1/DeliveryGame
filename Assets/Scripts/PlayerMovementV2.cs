@@ -37,8 +37,6 @@ public class PlayerMovementV2 : MonoBehaviour
 
         if((Vector2)transform.position == (Vector2)targetNode.transform.position)
         {
-            Debug.Log("you have reached the destination");
-            Debug.Log("Current Direction: " + currentDirection);
             targetNode = FindTargetNode(currentDirection);
             currentNode = targetNode;
         }
