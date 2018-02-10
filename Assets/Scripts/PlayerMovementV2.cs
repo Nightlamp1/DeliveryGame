@@ -18,6 +18,8 @@ public class PlayerMovementV2 : MonoBehaviour
     public Transform leftTop, leftBot, rightTop, rightBot;
     public Transform upLeft, upRight, downLeft, downRight;
 
+    private Vector2 touchStartPosition;
+
     // Use this for initialization
     void Start()
     {
@@ -29,33 +31,7 @@ public class PlayerMovementV2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            targetNode = FindTargetNode(-Vector2.up);
-            currentNode = targetNode;
-            currentDirection = -Vector2.up;
-        }
-
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            targetNode = FindTargetNode(Vector2.right);
-            currentNode = targetNode;
-            currentDirection = Vector2.right;
-        }
-
-        if(Input.GetKeyDown(KeyCode.W))
-        {
-            targetNode = FindTargetNode(Vector2.up);
-            currentNode = targetNode;
-            currentDirection = Vector2.up;
-        }
-
-        if(Input.GetKeyDown(KeyCode.A))
-        {
-            targetNode = FindTargetNode(-Vector2.right);
-            currentNode = targetNode;
-            currentDirection = -Vector2.right;
-        }
+        CheckForUserInput();
 
         player.MovePosition(Vector2.MoveTowards(transform.position, targetNode.transform.position, speed*Time.deltaTime));
 
@@ -138,7 +114,113 @@ public class PlayerMovementV2 : MonoBehaviour
         {
             canMoveDown = false;
         }
+    }
 
+    void CheckForUserInput()
+    {
+#if UNITY_STANDALONE || UNITY_WEBPLAYER || UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            if (canMoveDown)
+            {
+                targetNode = FindTargetNode(-Vector2.up);
+                currentNode = targetNode;
+            }
+            currentDirection = -Vector2.up;
+        }
 
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            if (canMoveRight)
+            {
+                targetNode = FindTargetNode(Vector2.right);
+                currentNode = targetNode;
+            }
+            currentDirection = Vector2.right;
+        }
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            if (canMoveUp)
+            {
+                targetNode = FindTargetNode(Vector2.up);
+                currentNode = targetNode;
+            }
+            currentDirection = Vector2.up;
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            if (canMoveLeft)
+            {
+                targetNode = FindTargetNode(-Vector2.right);
+                currentNode = targetNode;
+            }
+            currentDirection = -Vector2.right;
+        }
+#elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
+        if (Input.touchCount > 0)
+        {
+            Touch myTouch = Input.touches[0];
+
+            if (myTouch.phase == TouchPhase.Began)
+            {
+                touchStartPosition = myTouch.position;
+            }
+            else if(myTouch.phase == TouchPhase.Ended && touchStartPosition.x >= 0)
+            {
+                Vector2 touchEnd = myTouch.position;
+
+                float x = touchEnd.x - touchStartPosition.x;
+
+                float y = touchEnd.y - touchStartPosition.y;
+
+                touchStartPosition.x = -1;
+
+                if (Mathf.Abs(x) > Mathf.Abs(y))
+                {
+                    if (x > 0)
+                    {
+                        if (canMoveRight)
+                        {
+                            targetNode = FindTargetNode(Vector2.right);
+                            currentNode = targetNode;
+                        }
+                        currentDirection = Vector2.right;
+                    }
+                    else
+                    {
+                        if (canMoveLeft)
+                        {
+                            targetNode = FindTargetNode(-Vector2.right);
+                            currentNode = targetNode;
+                        }
+                        currentDirection = -Vector2.right;
+                    }
+                }
+                else
+                {
+                    if (y > 0)
+                    {
+                        if (canMoveUp)
+                        {
+                            targetNode = FindTargetNode(Vector2.up);
+                            currentNode = targetNode;
+                        }
+                        currentDirection = Vector2.up;
+                    }
+                    else
+                    {
+                        if (canMoveDown)
+                        {
+                            targetNode = FindTargetNode(-Vector2.up);
+                            currentNode = targetNode;
+                        }
+                        currentDirection = -Vector2.up;
+                    }
+                }
+            }
+        }
+#endif
     }
 }
