@@ -1221,6 +1221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: 3
   playerInventory: []
+  playerHealthText: {fileID: 2023226552}
 --- !u!1 &1315077043
 GameObject:
   m_ObjectHideFlags: 0

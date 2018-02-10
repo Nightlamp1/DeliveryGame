@@ -1,17 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
     public int playerHealth = 3;
     public GameObject[] playerInventory;
+    public Text playerHealthText;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Enemy")
         {
             playerHealth -= 1;
+            playerHealthText.text = "Player Health: " + playerHealth;
             Debug.Log("Player Health Remaining: " + playerHealth);
         }
 
