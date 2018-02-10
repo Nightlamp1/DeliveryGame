@@ -14,6 +14,7 @@ public class PlayerMovementV2 : MonoBehaviour
 
     public bool upCheck, downCheck, leftCheck, rightCheck = false;
     public bool moving = false;
+    public Vector2 currentDirection;
 
     // Use this for initialization
     void Start()
@@ -28,30 +29,41 @@ public class PlayerMovementV2 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.S))
         {
-            Debug.Log("moving down");
             targetNode = FindTargetNode(-Vector2.up);
             currentNode = targetNode;
+            currentDirection = -Vector2.up;
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
             targetNode = FindTargetNode(Vector2.right);
             currentNode = targetNode;
+            currentDirection = Vector2.right;
         }
 
         if(Input.GetKeyDown(KeyCode.W))
         {
             targetNode = FindTargetNode(Vector2.up);
             currentNode = targetNode;
+            currentDirection = Vector2.up;
         }
 
         if(Input.GetKeyDown(KeyCode.A))
         {
             targetNode = FindTargetNode(-Vector2.right);
             currentNode = targetNode;
+            currentDirection = -Vector2.right;
         }
 
         player.MovePosition(Vector2.MoveTowards(transform.position, targetNode.transform.position, speed*Time.deltaTime));
+
+        if((Vector2)transform.position == (Vector2)targetNode.transform.position)
+        {
+            Debug.Log("you have reached the destination");
+            Debug.Log("Current Direction: " + currentDirection);
+            targetNode = FindTargetNode(currentDirection);
+            currentNode = targetNode;
+        }
     }
 
 

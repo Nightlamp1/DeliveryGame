@@ -813,6 +813,7 @@ MonoBehaviour:
   leftCheck: 0
   rightCheck: 0
   moving: 0
+  currentDirection: {x: 0, y: 0}
 --- !u!1 &1396968763
 GameObject:
   m_ObjectHideFlags: 0
