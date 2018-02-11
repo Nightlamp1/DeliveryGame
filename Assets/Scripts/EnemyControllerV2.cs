@@ -143,6 +143,7 @@ public class EnemyControllerV2 : MonoBehaviour {
         if(collision.tag == "Player")
         {
             Destroy(gameObject);
+            EnemySpawner.enemyCount -= 1;
         }
     }
 }
