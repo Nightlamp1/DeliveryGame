@@ -16,13 +16,9 @@ public class EnemySpawner : MonoBehaviour {
         InvokeRepeating("SpawnEnemy", 5.0f, 6.0f);
     }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     void SpawnEnemy()
     {
+        //If total enemy count is under the max count for the level spawn a new enemy
         if(enemyCount < maxEnemyCount)
         {
             GameObject spawningEnemy = enemies[Random.Range(0, enemies.Length)];
@@ -34,6 +30,7 @@ public class EnemySpawner : MonoBehaviour {
                 return;
             }
 
+            //Spawning an enemy
             Instantiate(spawningEnemy, spawningLocation, Quaternion.identity);
             enemyCount += 1;
 

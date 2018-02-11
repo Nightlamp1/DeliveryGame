@@ -15,11 +15,6 @@ public class ItemSpawnController : MonoBehaviour {
         envelopeCount = GameObject.FindGameObjectsWithTag("Envelope").Length;
         InvokeRepeating("SpawnItem", 2.0f, 4.0f);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-
-	}
 
     void SpawnItem()
     {
@@ -33,15 +28,9 @@ public class ItemSpawnController : MonoBehaviour {
             {
                 return;
             }
-
+            //Spawning an item
             Instantiate(spawningObject, spawningLocation, Quaternion.identity);
             envelopeCount += 1;
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(new Vector3(-10,18,-1), 0.5f);
     }
 }
