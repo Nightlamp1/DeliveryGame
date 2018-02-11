@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
     public int playerHealth = 3;
     public GameObject[] playerInventory;
     public Text playerHealthText;
+    public GameObject emptyInventorySlot;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -36,6 +37,10 @@ public class PlayerController : MonoBehaviour {
     private void Start()
     {
         playerInventory = new GameObject[3];
+        for(int i = 0; i < playerInventory.Length; i++)
+        {
+            playerInventory[i] = emptyInventorySlot;
+        }
         Debug.Log(playerInventory[0]);
     }
 
@@ -43,7 +48,7 @@ public class PlayerController : MonoBehaviour {
     {
         for (int i = 0; i < playerInventory.Length; i++)
         {
-            if(playerInventory[i] == null)
+            if(playerInventory[i] == emptyInventorySlot)
             {
                 playerInventory[i] = newEnvelope;
                 newEnvelope.SetActive(false);
@@ -60,10 +65,9 @@ public class PlayerController : MonoBehaviour {
             if (playerInventory[i].GetComponent<Envelope>().envelopeColor == color)
             {
                 Destroy(playerInventory[i]);
-                playerInventory[i] = null;
+                playerInventory[i] = emptyInventorySlot;
                 GameController.playerScore += 10;
-                Debug.Log(GameController.playerScore);
-                return;
+                ItemSpawnController.envelopeCount -= 1;
             }
         }
     }

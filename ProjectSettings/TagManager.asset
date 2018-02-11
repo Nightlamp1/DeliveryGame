@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Intersection
   - Envelope
+  - ItemSpawner
   layers:
   - Default
   - TransparentFX

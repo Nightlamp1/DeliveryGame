@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour {
     public Text playerScoreText;
 
     public static GameObject[] intersectionObjects;
-    private Vector3[] intersections;
+    private Vector3[] intersections;//needed?
 
     // Use this for initialization
     void Start () {
