@@ -32,13 +32,13 @@ public class PlayerMovementV2 : MonoBehaviour
     void Update()
     {
         CheckForUserInput();
-
-        player.MovePosition(Vector2.MoveTowards(transform.position, targetNode.transform.position, speed*Time.deltaTime));
+        MovePlayer();
+        UpdateCurrentNode();
 
         if((Vector2)transform.position == (Vector2)targetNode.transform.position)
         {
             targetNode = FindTargetNode(currentDirection);
-            currentNode = targetNode;
+            //currentNode = targetNode;
         }
 
         CheckForValidMoveDirections();
@@ -56,6 +56,19 @@ public class PlayerMovementV2 : MonoBehaviour
             
         }
         return currentNode;
+    }
+
+    void MovePlayer()
+    {
+        player.MovePosition(Vector2.MoveTowards(transform.position, targetNode.transform.position, speed * Time.deltaTime));
+    }
+
+    void UpdateCurrentNode()
+    {
+        if(Vector2.Distance(transform.position,currentNode.transform.position) > 0.4f)
+        {
+            currentNode = targetNode;
+        }
     }
 
     void CheckForValidMoveDirections()
@@ -122,7 +135,7 @@ public class PlayerMovementV2 : MonoBehaviour
             if (canMoveDown)
             {
                 targetNode = FindTargetNode(-Vector2.up);
-                currentNode = targetNode;
+                //currentNode = targetNode;
             }
             currentDirection = -Vector2.up;
         }
@@ -132,7 +145,7 @@ public class PlayerMovementV2 : MonoBehaviour
             if (canMoveRight)
             {
                 targetNode = FindTargetNode(Vector2.right);
-                currentNode = targetNode;
+                //currentNode = targetNode;
             }
             currentDirection = Vector2.right;
         }
@@ -142,7 +155,7 @@ public class PlayerMovementV2 : MonoBehaviour
             if (canMoveUp)
             {
                 targetNode = FindTargetNode(Vector2.up);
-                currentNode = targetNode;
+                //currentNode = targetNode;
             }
             currentDirection = Vector2.up;
         }
@@ -152,7 +165,7 @@ public class PlayerMovementV2 : MonoBehaviour
             if (canMoveLeft)
             {
                 targetNode = FindTargetNode(-Vector2.right);
-                currentNode = targetNode;
+                //currentNode = targetNode;
             }
             currentDirection = -Vector2.right;
         }
@@ -182,7 +195,7 @@ public class PlayerMovementV2 : MonoBehaviour
                         if (canMoveRight)
                         {
                             targetNode = FindTargetNode(Vector2.right);
-                            currentNode = targetNode;
+                            //currentNode = targetNode;
                         }
                         currentDirection = Vector2.right;
                     }
@@ -191,7 +204,7 @@ public class PlayerMovementV2 : MonoBehaviour
                         if (canMoveLeft)
                         {
                             targetNode = FindTargetNode(-Vector2.right);
-                            currentNode = targetNode;
+                            //currentNode = targetNode;
                         }
                         currentDirection = -Vector2.right;
                     }
@@ -203,7 +216,7 @@ public class PlayerMovementV2 : MonoBehaviour
                         if (canMoveUp)
                         {
                             targetNode = FindTargetNode(Vector2.up);
-                            currentNode = targetNode;
+                            //currentNode = targetNode;
                         }
                         currentDirection = Vector2.up;
                     }
@@ -212,7 +225,7 @@ public class PlayerMovementV2 : MonoBehaviour
                         if (canMoveDown)
                         {
                             targetNode = FindTargetNode(-Vector2.up);
-                            currentNode = targetNode;
+                            //currentNode = targetNode;
                         }
                         currentDirection = -Vector2.up;
                     }
