@@ -18,6 +18,10 @@ public class PlayerController : MonoBehaviour {
             playerHealth -= 1;
             playerHealthText.text = "Player Health: " + playerHealth;
             Debug.Log("Player Health Remaining: " + playerHealth);
+            if(playerHealth == 0)
+            {
+                gameOver();
+            }
         }
 
         if(collision.tag == "Envelope")
@@ -70,9 +74,15 @@ public class PlayerController : MonoBehaviour {
             {
                 Destroy(playerInventory[i]);
                 playerInventory[i] = emptyInventorySlot;
+                inventorySlots[i].enabled = false;
                 GameController.playerScore += 10;
                 ItemSpawnController.envelopeCount -= 1;
             }
         }
+    }
+
+    void gameOver()
+    {
+        Application.LoadLevel("MainMenu");
     }
 }

@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 50708283230190874}
   - component: {fileID: 61705325727635492}
   - component: {fileID: 114051259477656274}
+  - component: {fileID: 114765692921381172}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -312,7 +313,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.5625, y: 1.875}
-    newSize: {x: 0.41, y: 0.3}
+    newSize: {x: 2.5625, y: 1.875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -335,7 +336,7 @@ MonoBehaviour:
   currentNode: {fileID: 0}
   targetNode: {fileID: 0}
   player: {fileID: 0}
-  speed: 12
+  speed: 14
   canMoveUp: 0
   canMoveDown: 0
   canMoveLeft: 0
@@ -350,6 +351,26 @@ MonoBehaviour:
   upRight: {fileID: 4628747499018568}
   downLeft: {fileID: 4089585309406742}
   downRight: {fileID: 4679457695639240}
+--- !u!114 &114765692921381172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1675639068932944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aeac6110bf1a6146b27538d44770563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: 3
+  playerInventory: []
+  playerHealthText: {fileID: 0}
+  emptyInventorySlot: {fileID: 1926291391835042, guid: 61126f6a3f7045341b3939a7039c9a5b,
+    type: 2}
+  inventorySlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!212 &212003568028918886
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -384,12 +405,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b8acabcf8688f9046b2e4791764b3d20, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2cf75f21c15e0a847b7160de5c420bf7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.41, y: 0.3}
+  m_Size: {x: 2.5625, y: 1.875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
