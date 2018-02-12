@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
     public GameObject[] playerInventory;
     public Text playerHealthText;
     public GameObject emptyInventorySlot;
+    public Image[] inventorySlots = new Image[3];
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour {
         for(int i = 0; i < playerInventory.Length; i++)
         {
             playerInventory[i] = emptyInventorySlot;
+            inventorySlots[i].enabled = false;
         }
         Debug.Log(playerInventory[0]);
     }
@@ -51,6 +53,8 @@ public class PlayerController : MonoBehaviour {
             if(playerInventory[i] == emptyInventorySlot)
             {
                 playerInventory[i] = newEnvelope;
+                inventorySlots[i].enabled = true;
+                inventorySlots[i].sprite = newEnvelope.GetComponent<SpriteRenderer>().sprite;
                 newEnvelope.SetActive(false);
                 return;
             }
