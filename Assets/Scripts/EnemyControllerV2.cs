@@ -16,7 +16,7 @@ public class EnemyControllerV2 : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        currentDirection = -transform.right;
+        currentDirection = new Vector3(0f,0f,0f);
         enemy = GetComponent<Rigidbody2D>();
         enemy.velocity = new Vector2(speed * -1, 0f);
         targetPlayer = GameObject.FindGameObjectWithTag("Player");
