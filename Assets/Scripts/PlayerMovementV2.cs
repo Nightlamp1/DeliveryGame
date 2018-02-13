@@ -83,12 +83,6 @@ public class PlayerMovementV2 : MonoBehaviour
         RaycastHit2D botLeftHit = Physics2D.Raycast(downLeft.position, Vector2.up, 1f);
         RaycastHit2D botRightHit = Physics2D.Raycast(downRight.position, Vector2.up, 1f);
 
-        /*
-        Debug.DrawRay(leftTop.position, transform.TransformDirection(Vector2.right) * 1f, Color.green);
-        Debug.DrawRay(leftBot.position, transform.TransformDirection(Vector2.right) * 1f, Color.green);
-        Debug.DrawRay(rightTop.position, transform.TransformDirection(-Vector2.right) * 1f, Color.green);
-        Debug.DrawRay(rightBot.position, transform.TransformDirection(-Vector2.right) * 1f, Color.green);
-        */
 
         if(leftTopHit.collider.tag == "Player" && leftBotHit.collider.tag == "Player")
         {

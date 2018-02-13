@@ -36,7 +36,7 @@ public class EnemyControllerV2 : MonoBehaviour {
 
     bool IsEnemyAtIntersection()
     {
-        foreach(GameObject intersect in GameController.intersectionObjects)
+        foreach(GameObject intersect in GameController.intersections)
         {
             if (Vector3.Distance(intersect.transform.position,transform.position) < 1.003)
                 return true;
