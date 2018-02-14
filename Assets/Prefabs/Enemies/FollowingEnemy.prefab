@@ -103,7 +103,7 @@ MonoBehaviour:
   currentNode: {fileID: 0}
   targetNode: {fileID: 0}
   player: {fileID: 0}
-  speed: 10
+  speed: 9
 --- !u!212 &212731123494477376
 SpriteRenderer:
   m_ObjectHideFlags: 1

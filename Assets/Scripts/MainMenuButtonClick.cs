@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuButtonClick : MonoBehaviour {
 
@@ -17,5 +18,10 @@ public class MainMenuButtonClick : MonoBehaviour {
     public void LoadLevel()
     {
         Application.LoadLevel("Level1");
+    }
+
+    public void LoadLevel2()
+    {
+        SceneManager.LoadScene("Level2", LoadSceneMode.Single);
     }
 }

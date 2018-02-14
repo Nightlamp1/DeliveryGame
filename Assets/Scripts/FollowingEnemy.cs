@@ -11,7 +11,7 @@ public class FollowingEnemy : MonoBehaviour {
     private Vector2 directionToPlayer;
     public GameObject player;
     private Rigidbody2D enemy;
-    public float speed = 10f;
+    public float speed = 9f;
 
 
     // Use this for initialization
@@ -103,5 +103,14 @@ public class FollowingEnemy : MonoBehaviour {
     void MoveEnemy()
     {
         enemy.MovePosition(Vector2.MoveTowards(transform.position, targetNode.transform.position, speed * Time.deltaTime));
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Player")
+        {
+            Destroy(gameObject);
+            EnemySpawner.enemyCount -= 1;
+        }
     }
 }
