@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        playerScore = 0;
         intersections = GameObject.FindGameObjectsWithTag("Intersection");
         intersectionObjects = new Intersection[intersections.Length];
         for(int i = 0; i < intersections.Length; i++)
