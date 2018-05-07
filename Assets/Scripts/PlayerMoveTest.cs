@@ -13,6 +13,7 @@ public class PlayerMoveTest : MonoBehaviour
 
     private SpriteRenderer playerSprite;
     private Sprite nextSprite;
+    private Vector2 touchStartPosition;
 
     void Start()
     {
@@ -25,8 +26,8 @@ public class PlayerMoveTest : MonoBehaviour
     bool valid(Vector2 dir)
     {
         Vector2 pos = transform.position;
-        Vector2 leftCheck = new Vector2 (-0.5f, 0);
-        Vector2 rightCheck = new Vector2 (0.5f, 0);
+        Vector2 leftCheck = new Vector2(-0.5f, 0);
+        Vector2 rightCheck = new Vector2(0.5f, 0);
         Vector2 downCheck = new Vector2(0, -0.5f);
         Vector2 upCheck = new Vector2(0, 0.5f);
 
@@ -35,27 +36,21 @@ public class PlayerMoveTest : MonoBehaviour
         RaycastHit2D hitDown = Physics2D.Linecast((pos + downCheck) + dir, pos);
         RaycastHit2D hitUp = Physics2D.Linecast((pos + upCheck) + dir, pos);
 
-        if(dir.y == 0)
+        Debug.Log("Up Check" + hitUp.collider.tag);
+        Debug.Log("Down Check" + hitDown.collider.tag);
+        Debug.Log("LEft Check " + hitLeft.collider.tag);
+        Debug.Log("right check " + hitRight.collider.tag);
+
+        Debug.Log(dir);
+
+
+        if (hitUp.collider.tag == "Environment" || hitDown.collider.tag == "Environment" || hitRight.collider.tag == "Environment" || hitLeft.collider.tag == "Environment")
         {
-            if (hitUp.collider.tag == "Environment" || hitDown.collider.tag == "Environment")
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return false;
         }
         else
         {
-            if (hitLeft.collider.tag == "Environment" || hitRight.collider.tag == "Environment")
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return true;
         }
 
     }
@@ -79,7 +74,7 @@ public class PlayerMoveTest : MonoBehaviour
             {
                 dest = (Vector2)transform.position + currentDirection;
             }
-                
+
         }
 
         MovePlayer(dest);
@@ -94,6 +89,7 @@ public class PlayerMoveTest : MonoBehaviour
 
     void checkForUserInput()
     {
+#if UNITY_STANDALONE || UNITY_WEBPLAYER || UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.W))
         {
             nextDirectionWhenAvailable = Vector2.up;
@@ -114,5 +110,50 @@ public class PlayerMoveTest : MonoBehaviour
             nextDirectionWhenAvailable = -Vector2.right;
             nextSprite = playerLeft;
         }
+#elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
+        if (Input.touchCount > 0)
+        {
+            Touch myTouch = Input.touches[0];
+
+            if (myTouch.phase == TouchPhase.Began)
+            {
+                touchStartPosition = myTouch.position;
+            }
+            else if (myTouch.phase == TouchPhase.Ended && touchStartPosition.x >= 0)
+            {
+                Vector2 touchEnd = myTouch.position;
+                float x = touchEnd.x - touchStartPosition.x;
+                float y = touchEnd.y - touchStartPosition.y;
+                touchStartPosition.x = -1;
+
+                if (Mathf.Abs(x) > Mathf.Abs(y))
+                {
+                    if (x > 0)
+                    {
+                        nextDirectionWhenAvailable = Vector2.right;
+                        nextSprite = playerRight;
+                    }
+                    else
+                    {
+                        nextDirectionWhenAvailable = -Vector2.right;
+                        nextSprite = playerLeft;
+                    }
+                }
+                else
+                {
+                    if (y > 0)
+                    {
+                        nextDirectionWhenAvailable = Vector2.up;
+                        nextSprite = playerUp;
+                    }
+                    else
+                    {
+                        nextDirectionWhenAvailable = -Vector2.up;
+                        nextSprite = playerDown;
+                    }
+                }
+            }
+        }
+#endif
     }
 }

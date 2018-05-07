@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour {
         {
             playerHealth -= 1;
             playerHealthText.text = "Player Health: " + playerHealth;
-            Debug.Log("Player Health Remaining: " + playerHealth);
             if(playerHealth == 0)
             {
                 gameOver();
@@ -26,13 +25,11 @@ public class PlayerController : MonoBehaviour {
 
         if(collision.tag == "Envelope")
         {
-            Debug.Log("You picked up an envelope");
             addEnvelopeToInventory(collision.gameObject);
         }
 
         if(collision.tag == "Mailbox")
         {
-            Debug.Log("you scored!!");
             string mailboxColor = collision.gameObject.GetComponent<Mailbox>().mailboxColor;
             deliverMailToMailbox(mailboxColor);
 
@@ -63,7 +60,6 @@ public class PlayerController : MonoBehaviour {
                 return;
             }
         }
-        Debug.Log("Inventory is full");
     }
 
     void deliverMailToMailbox(string color)
