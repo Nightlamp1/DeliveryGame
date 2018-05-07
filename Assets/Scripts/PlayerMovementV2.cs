@@ -12,6 +12,9 @@ public class PlayerMovementV2 : MonoBehaviour
     public Rigidbody2D player;
     public float speed = 12f;
 
+    public Sprite leftFacing, rightFacing, upFacing, downFacing;
+    private Sprite nextSprite;
+
     public bool canMoveUp, canMoveDown, canMoveLeft, canMoveRight = false;
     public bool moving = false;
     public Vector2 currentDirection;
@@ -19,6 +22,7 @@ public class PlayerMovementV2 : MonoBehaviour
     public Transform upLeft, upRight, downLeft, downRight;
 
     private Vector2 touchStartPosition;
+    private SpriteRenderer playerSprite;
 
     // Use this for initialization
     void Start()
@@ -26,6 +30,7 @@ public class PlayerMovementV2 : MonoBehaviour
         currentNode = startingNode;
         targetNode = startingNode;
         player = GetComponent<Rigidbody2D>();
+        playerSprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -61,6 +66,7 @@ public class PlayerMovementV2 : MonoBehaviour
     void MovePlayer()
     {
         player.MovePosition(Vector2.MoveTowards(transform.position, targetNode.transform.position, speed * Time.deltaTime));
+        
     }
 
     void UpdateCurrentNode()
@@ -132,6 +138,8 @@ public class PlayerMovementV2 : MonoBehaviour
                 //currentNode = targetNode;
             }
             currentDirection = -Vector2.up;
+            nextSprite = downFacing;
+            
         }
 
         if (Input.GetKeyDown(KeyCode.D))
@@ -142,6 +150,7 @@ public class PlayerMovementV2 : MonoBehaviour
                 //currentNode = targetNode;
             }
             currentDirection = Vector2.right;
+            nextSprite = rightFacing;
         }
 
         if (Input.GetKeyDown(KeyCode.W))
@@ -152,6 +161,7 @@ public class PlayerMovementV2 : MonoBehaviour
                 //currentNode = targetNode;
             }
             currentDirection = Vector2.up;
+            nextSprite = upFacing;
         }
 
         if (Input.GetKeyDown(KeyCode.A))
@@ -162,6 +172,7 @@ public class PlayerMovementV2 : MonoBehaviour
                 //currentNode = targetNode;
             }
             currentDirection = -Vector2.right;
+            nextSprite = leftFacing;
         }
 #elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
         if (Input.touchCount > 0)
