@@ -36,14 +36,6 @@ public class PlayerMoveTest : MonoBehaviour
         RaycastHit2D hitDown = Physics2D.Linecast((pos + downCheck) + dir, pos);
         RaycastHit2D hitUp = Physics2D.Linecast((pos + upCheck) + dir, pos);
 
-        Debug.Log("Up Check" + hitUp.collider.tag);
-        Debug.Log("Down Check" + hitDown.collider.tag);
-        Debug.Log("LEft Check " + hitLeft.collider.tag);
-        Debug.Log("right check " + hitRight.collider.tag);
-
-        Debug.Log(dir);
-
-
         if (hitUp.collider.tag == "Environment" || hitDown.collider.tag == "Environment" || hitRight.collider.tag == "Environment" || hitLeft.collider.tag == "Environment")
         {
             return false;
