@@ -9,10 +9,15 @@ public class PlayerMoveTest : MonoBehaviour
     Vector2 dest = Vector2.zero;
     Vector2 currentDirection = Vector2.right;
     Vector2 nextDirectionWhenAvailable = Vector2.zero;
+    public Sprite playerUp, playerDown, playerLeft, playerRight;
+
+    private SpriteRenderer playerSprite;
+    private Sprite nextSprite;
 
     void Start()
     {
         dest = transform.position;
+        playerSprite = GetComponent<SpriteRenderer>();
     }
 
     bool valid(Vector2 dir)
@@ -59,18 +64,22 @@ public class PlayerMoveTest : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             nextDirectionWhenAvailable = Vector2.up;
+            nextSprite = playerUp;
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
             nextDirectionWhenAvailable = Vector2.right;
+            nextSprite = playerRight;
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
             nextDirectionWhenAvailable = -Vector2.up;
+            nextSprite = playerDown;
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
             nextDirectionWhenAvailable = -Vector2.right;
+            nextSprite = playerLeft;
         }
     }
 
@@ -82,6 +91,7 @@ public class PlayerMoveTest : MonoBehaviour
             {
                 dest = (Vector2)transform.position + nextDirectionWhenAvailable;
                 currentDirection = nextDirectionWhenAvailable;
+                playerSprite.sprite = nextSprite;
             }
             else if (valid(currentDirection))
             {
