@@ -18,11 +18,12 @@ public class PlayerMoveTest : MonoBehaviour
     {
         dest = transform.position;
         playerSprite = GetComponent<SpriteRenderer>();
+        playerSprite.sprite = playerRight;
+        nextSprite = playerRight;
     }
 
     bool valid(Vector2 dir)
     {
-        // Cast Line from 'next to Pac-Man' to 'Pac-Man'
         Vector2 pos = transform.position;
         Vector2 leftCheck = new Vector2 (-0.5f, 0);
         Vector2 rightCheck = new Vector2 (0.5f, 0);
@@ -61,26 +62,7 @@ public class PlayerMoveTest : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            nextDirectionWhenAvailable = Vector2.up;
-            nextSprite = playerUp;
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            nextDirectionWhenAvailable = Vector2.right;
-            nextSprite = playerRight;
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            nextDirectionWhenAvailable = -Vector2.up;
-            nextSprite = playerDown;
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            nextDirectionWhenAvailable = -Vector2.right;
-            nextSprite = playerLeft;
-        }
+        checkForUserInput();
     }
 
     void FixedUpdate()
@@ -108,5 +90,29 @@ public class PlayerMoveTest : MonoBehaviour
     {
         Vector2 p = Vector2.MoveTowards(transform.position, dest, speed);
         GetComponent<Rigidbody2D>().MovePosition(p);
+    }
+
+    void checkForUserInput()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            nextDirectionWhenAvailable = Vector2.up;
+            nextSprite = playerUp;
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            nextDirectionWhenAvailable = Vector2.right;
+            nextSprite = playerRight;
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            nextDirectionWhenAvailable = -Vector2.up;
+            nextSprite = playerDown;
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            nextDirectionWhenAvailable = -Vector2.right;
+            nextSprite = playerLeft;
+        }
     }
 }
