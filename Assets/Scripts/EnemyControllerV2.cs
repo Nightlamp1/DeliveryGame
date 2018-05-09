@@ -145,5 +145,7 @@ public class EnemyControllerV2 : MonoBehaviour {
             Destroy(gameObject);
             EnemySpawner.enemyCount -= 1;
         }
+
+
     }
 }

@@ -112,5 +112,13 @@ public class FollowingEnemy : MonoBehaviour {
             Destroy(gameObject);
             EnemySpawner.enemyCount -= 1;
         }
+
+        if (collision.tag == "Bullet")
+        {
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+            EnemySpawner.enemyCount -= 1;
+            GameController.playerScore += 10;
+        }
     }
 }

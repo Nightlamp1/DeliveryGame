@@ -7,9 +7,10 @@ public class PlayerMoveTest : MonoBehaviour
 
     public float speed = 0.4f;
     Vector2 dest = Vector2.zero;
-    Vector2 currentDirection = Vector2.right;
+    public static Vector2 currentDirection = Vector2.right;
     Vector2 nextDirectionWhenAvailable = Vector2.zero;
     public Sprite playerUp, playerDown, playerLeft, playerRight;
+    public GameObject bulletObject;
 
     private SpriteRenderer playerSprite;
     private Sprite nextSprite;
@@ -50,6 +51,7 @@ public class PlayerMoveTest : MonoBehaviour
     void Update()
     {
         checkForUserInput();
+        checkForShooting();
     }
 
     void FixedUpdate()
@@ -147,5 +149,14 @@ public class PlayerMoveTest : MonoBehaviour
             }
         }
 #endif
+    }
+
+    void checkForShooting()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Vector3 fireLocation = (Vector3)transform.position + (Vector3)currentDirection * 2;
+            GameObject firedBullet = Instantiate(bulletObject, fireLocation, Quaternion.identity);
+        }
     }
 }

@@ -11,6 +11,7 @@ TagManager:
   - Envelope
   - ItemSpawner
   - EnemySpawn
+  - Bullet
   layers:
   - Default
   - TransparentFX
