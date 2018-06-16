@@ -114,40 +114,58 @@ public class PlayerMoveTest : MonoBehaviour
             if (myTouch.phase == TouchPhase.Began)
             {
                 touchStartPosition = myTouch.position;
-            }
-            else if (myTouch.phase == TouchPhase.Ended && touchStartPosition.x >= 0)
-            {
-                Vector2 touchEnd = myTouch.position;
-                float x = touchEnd.x - touchStartPosition.x;
-                float y = touchEnd.y - touchStartPosition.y;
-                touchStartPosition.x = -1;
-                    
-                if (Mathf.Abs(x) > Mathf.Abs(y))
+                if (EventSystem.current.IsPointerOverGameObject(myTouch.fingerId))
                 {
-                    if (x > 0)
-                    {
-                        nextDirectionWhenAvailable = Vector2.right;
-                        nextSprite = playerRight;
-                    }
-                    else
-                    {
-                        nextDirectionWhenAvailable = -Vector2.right;
-                        nextSprite = playerLeft;
-                    }
+                    uiTouchDetected = true;
                 }
                 else
                 {
-                    if (y > 0)
+                    uiTouchDetected = false;
+                }
+            }
+            else if (myTouch.phase == TouchPhase.Ended && touchStartPosition.x >= 0)
+            {
+                if (uiTouchDetected)
+                {
+                    GameController.playerScore += 333;
+                }
+                else if (!uiTouchDetected)
+                {
+                    Vector2 touchEnd = myTouch.position;
+                    float x = touchEnd.x - touchStartPosition.x;
+                    float y = touchEnd.y - touchStartPosition.y;
+                    touchStartPosition.x = -1;
+
+                    if (Mathf.Abs(x) > Mathf.Abs(y))
                     {
-                        nextDirectionWhenAvailable = Vector2.up;
-                        nextSprite = playerUp;
+                        if (x > 0)
+                        {
+                            nextDirectionWhenAvailable = Vector2.right;
+                            nextSprite = playerRight;
+                        }
+                        else
+                        {
+                            nextDirectionWhenAvailable = -Vector2.right;
+                            nextSprite = playerLeft;
+                        }
                     }
                     else
                     {
-                        nextDirectionWhenAvailable = -Vector2.up;
-                        nextSprite = playerDown;
+                        if (y > 0)
+                        {
+                            nextDirectionWhenAvailable = Vector2.up;
+                            nextSprite = playerUp;
+                        }
+                        else
+                        {
+                            nextDirectionWhenAvailable = -Vector2.up;
+                            nextSprite = playerDown;
+                        }
                     }
+
+                    GameController.playerScore += 1000;
                 }
+
             }
         }
 #endif
