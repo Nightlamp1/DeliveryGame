@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerMoveTest : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class PlayerMoveTest : MonoBehaviour
     private SpriteRenderer playerSprite;
     private Sprite nextSprite;
     private Vector2 touchStartPosition;
+    private bool uiTouchDetected = false;
 
     void Start()
     {
@@ -104,11 +106,21 @@ public class PlayerMoveTest : MonoBehaviour
             nextDirectionWhenAvailable = -Vector2.right;
             nextSprite = playerLeft;
         }
+
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                Debug.Log("pressing button");
+            }
+        }
+
 #elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
         if (Input.touchCount > 0)
         {
             Touch myTouch = Input.touches[0];
-
+            Touch startingTouch = myTouch;
             if (myTouch.phase == TouchPhase.Began)
             {
                 touchStartPosition = myTouch.position;
@@ -119,7 +131,7 @@ public class PlayerMoveTest : MonoBehaviour
                 float x = touchEnd.x - touchStartPosition.x;
                 float y = touchEnd.y - touchStartPosition.y;
                 touchStartPosition.x = -1;
-
+                    
                 if (Mathf.Abs(x) > Mathf.Abs(y))
                 {
                     if (x > 0)
@@ -158,5 +170,12 @@ public class PlayerMoveTest : MonoBehaviour
             Vector3 fireLocation = (Vector3)transform.position + (Vector3)currentDirection * 2;
             GameObject firedBullet = Instantiate(bulletObject, fireLocation, Quaternion.identity);
         }
+    }
+
+    public void shootButtonPressed()
+    {
+        Debug.Log("BUTTON PRESSED");
+        Vector3 fireLocation = (Vector3)transform.position + (Vector3)currentDirection * 2;
+        GameObject firedBullet = Instantiate(bulletObject, fireLocation, Quaternion.identity);
     }
 }
