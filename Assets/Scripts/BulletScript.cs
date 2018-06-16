@@ -14,6 +14,22 @@ public class BulletScript : MonoBehaviour {
         bulletRb = GetComponent<Rigidbody2D>();
         bulletRb.velocity = fireDirection * speed;
 
+
+        Debug.Log(fireDirection);
+
+        if(fireDirection == new Vector2(0, -1))
+        {
+            transform.Rotate(new Vector3(0f, 0f, 270f));
+        }
+        else if(fireDirection == new Vector2(0, 1))
+        {
+            transform.Rotate(new Vector3(0f, 0f, 90f));
+        }
+        else if(fireDirection == new Vector2(-1, 0))
+        {
+            transform.Rotate(new Vector3(0f, 0f, 180f));
+        }
+
 	}
 	
 	// Update is called once per frame
