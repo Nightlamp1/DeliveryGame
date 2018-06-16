@@ -107,20 +107,10 @@ public class PlayerMoveTest : MonoBehaviour
             nextSprite = playerLeft;
         }
 
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (EventSystem.current.IsPointerOverGameObject())
-            {
-                Debug.Log("pressing button");
-            }
-        }
-
 #elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
         if (Input.touchCount > 0)
         {
             Touch myTouch = Input.touches[0];
-            Touch startingTouch = myTouch;
             if (myTouch.phase == TouchPhase.Began)
             {
                 touchStartPosition = myTouch.position;
