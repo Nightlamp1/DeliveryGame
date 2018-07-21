@@ -37,22 +37,49 @@ public class PlayerMoveTest : MonoBehaviour
     {
         Vector2 pos = transform.position;
         Debug.Log(pos);
-        Vector2 leftCheck = new Vector2(-0.5f, 0);
-        Vector2 rightCheck = new Vector2(0.5f, 0);
-        Vector2 downCheck = new Vector2(0, -0.5f);
-        Vector2 upCheck = new Vector2(0, 0.5f);
+        Vector2 leftCheck = new Vector2(-1.5f, pos.y);
+        Vector2 rightCheck = new Vector2(1.5f, pos.y);
+        Vector2 downCheck = new Vector2(pos.x, -1.5f);
+        Vector2 upCheck = new Vector2(pos.x, 1.5f);
 
-        RaycastHit2D hitLeft = Physics2D.Linecast((pos + leftCheck) + dir, pos);
-        RaycastHit2D hitRight = Physics2D.Linecast((pos + rightCheck) + dir, pos);
-        RaycastHit2D hitDown = Physics2D.Linecast((pos + downCheck) + dir, pos);
-        RaycastHit2D hitUp = Physics2D.Linecast((pos + upCheck) + dir, pos);
+        Vector2 finalVector1 = new Vector2(0, 0);
+        Vector2 finalVector2 = new Vector2(0, 0);
+        Vector2 finalVector3 = new Vector2(0, 0);
 
-        Debug.DrawLine((pos + upCheck) + dir, pos, Color.red);
-        Debug.DrawLine((pos + leftCheck) + dir, pos, Color.red);
-        Debug.DrawLine((pos + rightCheck) + dir, pos, Color.red);
-        Debug.DrawLine((pos + downCheck) + dir, pos, Color.red);
+        if (dir == Vector2.left)
+        {
+            finalVector1 = new Vector2(-1.5f, 0.0f);
+            finalVector2 = new Vector2(-1.5f, 0.9f);
+            finalVector3 = new Vector2(-1.5f, -0.9f);
+        }
+        else if(dir == Vector2.right)
+        {
+            finalVector1 = new Vector2(1.5f, 0.0f);
+            finalVector2 = new Vector2(1.5f, 0.9f);
+            finalVector3 = new Vector2(1.5f, -0.9f);
+        }
+        else if(dir == Vector2.up)
+        {
+            finalVector1 = new Vector2(0.0f, 1.5f);
+            finalVector2 = new Vector2(0.9f, 1.5f);
+            finalVector3 = new Vector2(-0.9f, 1.5f);
+        }
+        else if(dir == Vector2.down)
+        {
+            finalVector1 = new Vector2(0.0f, -1.5f);
+            finalVector2 = new Vector2(0.9f, -1.5f);
+            finalVector3 = new Vector2(-0.9f, -1.5f);
+        }
 
-        if (hitUp.collider.tag == "Environment" || hitDown.collider.tag == "Environment" || hitRight.collider.tag == "Environment" || hitLeft.collider.tag == "Environment")
+        RaycastHit2D hitLeft = Physics2D.Linecast((finalVector1 + pos), pos);
+        RaycastHit2D hitRight = Physics2D.Linecast((finalVector2 + pos), pos);
+        RaycastHit2D hitDown = Physics2D.Linecast((finalVector3 + pos), pos);
+
+        Debug.DrawLine((finalVector1 + pos), pos, Color.red);
+        Debug.DrawLine((finalVector2 + pos), pos, Color.red);
+        Debug.DrawLine((finalVector3 + pos), pos, Color.red);
+
+        if (hitDown.collider.tag == "Environment" || hitRight.collider.tag == "Environment" || hitLeft.collider.tag == "Environment")
         {
             return false;
         }

@@ -22,6 +22,6 @@ public class MainMenuButtonClick : MonoBehaviour {
 
     public void LoadLevel2()
     {
-        SceneManager.LoadScene("Level2", LoadSceneMode.Single);
+        SceneManager.LoadScene("LevelTest", LoadSceneMode.Single);
     }
 }
