@@ -333,6 +333,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.3
+  playerUp: {fileID: 21300018, guid: c9772ed5b2f129d49bc527f8594d842a, type: 3}
+  playerDown: {fileID: 21300000, guid: c9772ed5b2f129d49bc527f8594d842a, type: 3}
+  playerLeft: {fileID: 21300006, guid: c9772ed5b2f129d49bc527f8594d842a, type: 3}
+  playerRight: {fileID: 21300012, guid: c9772ed5b2f129d49bc527f8594d842a, type: 3}
+  bulletObject: {fileID: 1874783303726068, guid: 39bda422abfcace408765f1b43e30416,
+    type: 2}
 --- !u!114 &114765692921381172
 MonoBehaviour:
   m_ObjectHideFlags: 1

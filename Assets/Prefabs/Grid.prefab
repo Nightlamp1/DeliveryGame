@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 3664157345088720244}
   m_Layer: 0
   m_Name: Deceration
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -18,6 +18,13 @@ public class PlayerMoveTest : MonoBehaviour
     private Vector2 touchStartPosition;
     private bool uiTouchDetected = false;
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.collider.tag);
+        Debug.Log(dest);
+        Debug.Log(currentDirection);
+    }
+
     void Start()
     {
         dest = transform.position;
@@ -29,6 +36,7 @@ public class PlayerMoveTest : MonoBehaviour
     bool valid(Vector2 dir)
     {
         Vector2 pos = transform.position;
+        Debug.Log(pos);
         Vector2 leftCheck = new Vector2(-0.5f, 0);
         Vector2 rightCheck = new Vector2(0.5f, 0);
         Vector2 downCheck = new Vector2(0, -0.5f);
@@ -38,6 +46,11 @@ public class PlayerMoveTest : MonoBehaviour
         RaycastHit2D hitRight = Physics2D.Linecast((pos + rightCheck) + dir, pos);
         RaycastHit2D hitDown = Physics2D.Linecast((pos + downCheck) + dir, pos);
         RaycastHit2D hitUp = Physics2D.Linecast((pos + upCheck) + dir, pos);
+
+        Debug.DrawLine((pos + upCheck) + dir, pos, Color.red);
+        Debug.DrawLine((pos + leftCheck) + dir, pos, Color.red);
+        Debug.DrawLine((pos + rightCheck) + dir, pos, Color.red);
+        Debug.DrawLine((pos + downCheck) + dir, pos, Color.red);
 
         if (hitUp.collider.tag == "Environment" || hitDown.collider.tag == "Environment" || hitRight.collider.tag == "Environment" || hitLeft.collider.tag == "Environment")
         {
