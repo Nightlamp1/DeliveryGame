@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: bea1bf23842ab074f927d8896c1616c3
-timeCreated: 1518400160
+timeCreated: 1532294752
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -178,17 +178,17 @@ TextureImporter:
     21300342: roguelikeCity_magenta_171
     21300344: roguelikeCity_magenta_172
     21300346: roguelikeCity_magenta_173
-    21300348: roguelikeCity_magenta_174
-    21300350: roguelikeCity_magenta_175
-    21300352: roguelikeCity_magenta_176
-    21300354: roguelikeCity_magenta_177
-    21300356: roguelikeCity_magenta_178
-    21300358: roguelikeCity_magenta_179
-    21300360: roguelikeCity_magenta_180
-    21300362: roguelikeCity_magenta_181
-    21300364: roguelikeCity_magenta_182
-    21300366: roguelikeCity_magenta_183
-    21300368: roguelikeCity_magenta_184
+    21300348: water_1
+    21300350: water_2
+    21300352: water_3
+    21300354: water_4
+    21300356: water_5
+    21300358: sign_1
+    21300360: sign_2
+    21300362: sign_3
+    21300364: sign_4
+    21300366: sign_5
+    21300368: sign_6
     21300370: brick_wall5
     21300372: brick_wall6
     21300374: brick_wall7
@@ -215,17 +215,17 @@ TextureImporter:
     21300416: roguelikeCity_magenta_208
     21300418: roguelikeCity_magenta_209
     21300420: roguelikeCity_magenta_210
-    21300422: roguelikeCity_magenta_211
-    21300424: roguelikeCity_magenta_212
-    21300426: roguelikeCity_magenta_213
-    21300428: roguelikeCity_magenta_214
-    21300430: roguelikeCity_magenta_215
-    21300432: roguelikeCity_magenta_216
-    21300434: roguelikeCity_magenta_217
-    21300436: roguelikeCity_magenta_218
-    21300438: roguelikeCity_magenta_219
-    21300440: roguelikeCity_magenta_220
-    21300442: roguelikeCity_magenta_221
+    21300422: water_10
+    21300424: water_11
+    21300426: water_12
+    21300428: water_6
+    21300430: water_7
+    21300432: sign_7
+    21300434: sign_8
+    21300436: sign_9
+    21300438: sign_10
+    21300440: sign_11
+    21300442: sign_12
     21300444: brick_wall9
     21300446: brick_wall10
     21300448: brick_wall11
@@ -252,17 +252,17 @@ TextureImporter:
     21300490: roguelikeCity_magenta_245
     21300492: roguelikeCity_magenta_246
     21300494: roguelikeCity_magenta_247
-    21300496: roguelikeCity_magenta_248
-    21300498: roguelikeCity_magenta_249
-    21300500: roguelikeCity_magenta_250
-    21300502: roguelikeCity_magenta_251
-    21300504: roguelikeCity_magenta_252
-    21300506: roguelikeCity_magenta_253
-    21300508: roguelikeCity_magenta_254
-    21300510: roguelikeCity_magenta_255
-    21300512: roguelikeCity_magenta_256
-    21300514: roguelikeCity_magenta_257
-    21300516: roguelikeCity_magenta_258
+    21300496: water_13
+    21300498: water_14
+    21300500: water_15
+    21300502: water_8
+    21300504: water_9
+    21300506: sign_13
+    21300508: sign_14
+    21300510: sign_15
+    21300512: sign_16
+    21300514: sign_17
+    21300516: sign_18
     21300518: brick_wall13
     21300520: brick_wall14
     21300522: brick_wall15
@@ -291,15 +291,15 @@ TextureImporter:
     21300568: roguelikeCity_magenta_284
     21300570: roguelikeCity_magenta_285
     21300572: roguelikeCity_magenta_286
-    21300574: roguelikeCity_magenta_287
-    21300576: roguelikeCity_magenta_288
-    21300578: roguelikeCity_magenta_289
-    21300580: roguelikeCity_magenta_290
-    21300582: roguelikeCity_magenta_291
-    21300584: roguelikeCity_magenta_292
-    21300586: roguelikeCity_magenta_293
-    21300588: roguelikeCity_magenta_294
-    21300590: roguelikeCity_magenta_295
+    21300574: mailbox_1
+    21300576: mailbox_2
+    21300578: mailbox_3
+    21300580: sign_19
+    21300582: sign_20
+    21300584: sign_21
+    21300586: sign_28
+    21300588: sign_30
+    21300590: sign_31
     21300592: brick_wall17
     21300594: brick_wall18
     21300596: brick_wall19
@@ -324,19 +324,19 @@ TextureImporter:
     21300634: roguelikeCity_magenta_317
     21300636: roguelikeCity_magenta_318
     21300638: roguelikeCity_magenta_319
-    21300640: roguelikeCity_magenta_320
-    21300642: roguelikeCity_magenta_321
-    21300644: roguelikeCity_magenta_322
-    21300646: roguelikeCity_magenta_323
-    21300648: roguelikeCity_magenta_324
-    21300650: roguelikeCity_magenta_325
-    21300652: roguelikeCity_magenta_326
-    21300654: roguelikeCity_magenta_327
-    21300656: roguelikeCity_magenta_328
-    21300658: roguelikeCity_magenta_329
-    21300660: roguelikeCity_magenta_330
-    21300662: roguelikeCity_magenta_331
-    21300664: roguelikeCity_magenta_332
+    21300640: mailbox_4
+    21300642: mailbox_5
+    21300644: mailbox_6
+    21300646: mailbox_7
+    21300648: mailbox_8
+    21300650: mailbox_9
+    21300652: mailbox_10
+    21300654: sign_22
+    21300656: sign_23
+    21300658: sign_24
+    21300660: sign_29
+    21300662: sign_32
+    21300664: sign_33
     21300666: brick_wall21
     21300668: brick_wall22
     21300670: brick_wall23
@@ -368,9 +368,9 @@ TextureImporter:
     21300722: awning22
     21300724: awning23
     21300726: awning24
-    21300728: roguelikeCity_magenta_364
-    21300730: roguelikeCity_magenta_365
-    21300732: roguelikeCity_magenta_366
+    21300728: sign_25
+    21300730: sign_26
+    21300732: sign_27
     21300734: roguelikeCity_magenta_367
     21300736: roguelikeCity_magenta_368
     21300738: roguelikeCity_magenta_369
@@ -804,14 +804,14 @@ TextureImporter:
     21301594: roguelikeCity_magenta_797
     21301596: roguelikeCity_magenta_798
     21301598: roguelikeCity_magenta_799
-    21301600: roguelikeCity_magenta_800
-    21301602: roguelikeCity_magenta_801
-    21301604: roguelikeCity_magenta_802
-    21301606: roguelikeCity_magenta_803
-    21301608: roguelikeCity_magenta_804
-    21301610: roguelikeCity_magenta_805
-    21301612: roguelikeCity_magenta_806
-    21301614: roguelikeCity_magenta_807
+    21301600: glass_door_1
+    21301602: glass_door_2
+    21301604: glass_door_3
+    21301606: glass_door_4
+    21301608: glass_door_21
+    21301610: glass_door_22
+    21301612: glass_door_23
+    21301614: glass_door_24
     21301616: player4
     21301618: player5
     21301620: player6
@@ -841,14 +841,14 @@ TextureImporter:
     21301668: roguelikeCity_magenta_834
     21301670: roguelikeCity_magenta_835
     21301672: roguelikeCity_magenta_836
-    21301674: roguelikeCity_magenta_837
-    21301676: roguelikeCity_magenta_838
-    21301678: roguelikeCity_magenta_839
-    21301680: roguelikeCity_magenta_840
-    21301682: roguelikeCity_magenta_841
-    21301684: roguelikeCity_magenta_842
-    21301686: roguelikeCity_magenta_843
-    21301688: roguelikeCity_magenta_844
+    21301674: glass_door_5
+    21301676: glass_door_6
+    21301678: glass_door_7
+    21301680: glass_door_8
+    21301682: glass_door_25
+    21301684: glass_door_26
+    21301686: glass_door_27
+    21301688: glass_door_28
     21301690: player14
     21301692: player15
     21301694: player18
@@ -878,14 +878,14 @@ TextureImporter:
     21301742: roguelikeCity_magenta_871
     21301744: roguelikeCity_magenta_872
     21301746: roguelikeCity_magenta_873
-    21301748: roguelikeCity_magenta_874
-    21301750: roguelikeCity_magenta_875
-    21301752: roguelikeCity_magenta_876
-    21301754: roguelikeCity_magenta_877
-    21301756: roguelikeCity_magenta_878
-    21301758: roguelikeCity_magenta_879
-    21301760: roguelikeCity_magenta_880
-    21301762: roguelikeCity_magenta_881
+    21301748: glass_door_9
+    21301750: glass_door_10
+    21301752: glass_door_11
+    21301754: glass_door_12
+    21301756: glass_door_29
+    21301758: glass_door_30
+    21301760: glass_door_31
+    21301762: glass_door_32
     21301764: player16
     21301766: player17
     21301768: player20
@@ -915,14 +915,14 @@ TextureImporter:
     21301816: roguelikeCity_magenta_908
     21301818: roguelikeCity_magenta_909
     21301820: roguelikeCity_magenta_910
-    21301822: roguelikeCity_magenta_911
-    21301824: roguelikeCity_magenta_912
-    21301826: roguelikeCity_magenta_913
-    21301828: roguelikeCity_magenta_914
-    21301830: roguelikeCity_magenta_915
-    21301832: roguelikeCity_magenta_916
-    21301834: roguelikeCity_magenta_917
-    21301836: roguelikeCity_magenta_918
+    21301822: glass_door_13
+    21301824: glass_door_14
+    21301826: glass_door_15
+    21301828: glass_door_16
+    21301830: glass_door_33
+    21301832: glass_door_34
+    21301834: glass_door_35
+    21301836: glass_door_36
     21301838: roguelikeCity_magenta_919
     21301840: roguelikeCity_magenta_920
     21301842: roguelikeCity_magenta_921
@@ -952,14 +952,14 @@ TextureImporter:
     21301890: roguelikeCity_magenta_945
     21301892: roguelikeCity_magenta_946
     21301894: roguelikeCity_magenta_947
-    21301896: roguelikeCity_magenta_948
-    21301898: roguelikeCity_magenta_949
-    21301900: roguelikeCity_magenta_950
-    21301902: roguelikeCity_magenta_951
-    21301904: roguelikeCity_magenta_952
-    21301906: roguelikeCity_magenta_953
-    21301908: roguelikeCity_magenta_954
-    21301910: roguelikeCity_magenta_955
+    21301896: glass_door_17
+    21301898: glass_door_18
+    21301900: glass_door_19
+    21301902: glass_door_20
+    21301904: glass_door_37
+    21301906: glass_door_38
+    21301908: glass_door_39
+    21301910: glass_door_40
     21301912: roguelikeCity_magenta_956
     21301914: roguelikeCity_magenta_957
     21301916: roguelikeCity_magenta_958
@@ -3562,7 +3562,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_174
+      name: water_1
       rect:
         serializedVersion: 2
         x: 442
@@ -3576,7 +3576,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_175
+      name: water_2
       rect:
         serializedVersion: 2
         x: 459
@@ -3590,7 +3590,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_176
+      name: water_3
       rect:
         serializedVersion: 2
         x: 476
@@ -3604,7 +3604,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_177
+      name: water_4
       rect:
         serializedVersion: 2
         x: 493
@@ -3618,7 +3618,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_178
+      name: water_5
       rect:
         serializedVersion: 2
         x: 510
@@ -3632,10 +3632,10 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_179
+      name: sign_1
       rect:
         serializedVersion: 2
-        x: 527
+        x: 528
         y: 391
         width: 16
         height: 16
@@ -3646,7 +3646,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_180
+      name: sign_2
       rect:
         serializedVersion: 2
         x: 544
@@ -3660,7 +3660,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_181
+      name: sign_3
       rect:
         serializedVersion: 2
         x: 561
@@ -3674,7 +3674,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_182
+      name: sign_4
       rect:
         serializedVersion: 2
         x: 578
@@ -3688,7 +3688,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_183
+      name: sign_5
       rect:
         serializedVersion: 2
         x: 595
@@ -3702,7 +3702,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_184
+      name: sign_6
       rect:
         serializedVersion: 2
         x: 612
@@ -4080,7 +4080,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_211
+      name: water_10
       rect:
         serializedVersion: 2
         x: 442
@@ -4094,7 +4094,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_212
+      name: water_11
       rect:
         serializedVersion: 2
         x: 459
@@ -4108,7 +4108,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_213
+      name: water_12
       rect:
         serializedVersion: 2
         x: 476
@@ -4122,7 +4122,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_214
+      name: water_6
       rect:
         serializedVersion: 2
         x: 493
@@ -4136,7 +4136,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_215
+      name: water_7
       rect:
         serializedVersion: 2
         x: 510
@@ -4150,7 +4150,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_216
+      name: sign_7
       rect:
         serializedVersion: 2
         x: 527
@@ -4164,7 +4164,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_217
+      name: sign_8
       rect:
         serializedVersion: 2
         x: 544
@@ -4178,7 +4178,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_218
+      name: sign_9
       rect:
         serializedVersion: 2
         x: 561
@@ -4192,7 +4192,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_219
+      name: sign_10
       rect:
         serializedVersion: 2
         x: 578
@@ -4206,7 +4206,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_220
+      name: sign_11
       rect:
         serializedVersion: 2
         x: 595
@@ -4220,7 +4220,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_221
+      name: sign_12
       rect:
         serializedVersion: 2
         x: 612
@@ -4598,7 +4598,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_248
+      name: water_13
       rect:
         serializedVersion: 2
         x: 442
@@ -4612,7 +4612,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_249
+      name: water_14
       rect:
         serializedVersion: 2
         x: 459
@@ -4626,7 +4626,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_250
+      name: water_15
       rect:
         serializedVersion: 2
         x: 476
@@ -4640,7 +4640,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_251
+      name: water_8
       rect:
         serializedVersion: 2
         x: 493
@@ -4654,7 +4654,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_252
+      name: water_9
       rect:
         serializedVersion: 2
         x: 510
@@ -4668,7 +4668,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_253
+      name: sign_13
       rect:
         serializedVersion: 2
         x: 527
@@ -4682,7 +4682,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_254
+      name: sign_14
       rect:
         serializedVersion: 2
         x: 544
@@ -4696,7 +4696,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_255
+      name: sign_15
       rect:
         serializedVersion: 2
         x: 561
@@ -4710,7 +4710,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_256
+      name: sign_16
       rect:
         serializedVersion: 2
         x: 578
@@ -4724,7 +4724,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_257
+      name: sign_17
       rect:
         serializedVersion: 2
         x: 595
@@ -4738,7 +4738,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_258
+      name: sign_18
       rect:
         serializedVersion: 2
         x: 612
@@ -5144,7 +5144,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_287
+      name: mailbox_1
       rect:
         serializedVersion: 2
         x: 476
@@ -5158,7 +5158,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_288
+      name: mailbox_2
       rect:
         serializedVersion: 2
         x: 493
@@ -5172,7 +5172,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_289
+      name: mailbox_3
       rect:
         serializedVersion: 2
         x: 510
@@ -5186,7 +5186,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_290
+      name: sign_19
       rect:
         serializedVersion: 2
         x: 527
@@ -5200,7 +5200,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_291
+      name: sign_20
       rect:
         serializedVersion: 2
         x: 544
@@ -5214,7 +5214,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_292
+      name: sign_21
       rect:
         serializedVersion: 2
         x: 561
@@ -5228,7 +5228,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_293
+      name: sign_28
       rect:
         serializedVersion: 2
         x: 578
@@ -5242,7 +5242,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_294
+      name: sign_30
       rect:
         serializedVersion: 2
         x: 595
@@ -5256,7 +5256,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_295
+      name: sign_31
       rect:
         serializedVersion: 2
         x: 612
@@ -5606,7 +5606,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_320
+      name: mailbox_4
       rect:
         serializedVersion: 2
         x: 408
@@ -5620,7 +5620,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_321
+      name: mailbox_5
       rect:
         serializedVersion: 2
         x: 425
@@ -5634,7 +5634,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_322
+      name: mailbox_6
       rect:
         serializedVersion: 2
         x: 442
@@ -5648,7 +5648,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_323
+      name: mailbox_7
       rect:
         serializedVersion: 2
         x: 459
@@ -5662,7 +5662,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_324
+      name: mailbox_8
       rect:
         serializedVersion: 2
         x: 476
@@ -5676,7 +5676,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_325
+      name: mailbox_9
       rect:
         serializedVersion: 2
         x: 493
@@ -5690,7 +5690,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_326
+      name: mailbox_10
       rect:
         serializedVersion: 2
         x: 510
@@ -5704,7 +5704,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_327
+      name: sign_22
       rect:
         serializedVersion: 2
         x: 527
@@ -5718,7 +5718,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_328
+      name: sign_23
       rect:
         serializedVersion: 2
         x: 544
@@ -5732,7 +5732,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_329
+      name: sign_24
       rect:
         serializedVersion: 2
         x: 561
@@ -5746,7 +5746,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_330
+      name: sign_29
       rect:
         serializedVersion: 2
         x: 578
@@ -5760,7 +5760,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_331
+      name: sign_32
       rect:
         serializedVersion: 2
         x: 595
@@ -5774,7 +5774,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_332
+      name: sign_33
       rect:
         serializedVersion: 2
         x: 612
@@ -6222,7 +6222,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_364
+      name: sign_25
       rect:
         serializedVersion: 2
         x: 527
@@ -6236,7 +6236,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_365
+      name: sign_26
       rect:
         serializedVersion: 2
         x: 544
@@ -6250,7 +6250,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_366
+      name: sign_27
       rect:
         serializedVersion: 2
         x: 561
@@ -12326,7 +12326,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_800
+      name: glass_door_1
       rect:
         serializedVersion: 2
         x: 391
@@ -12340,7 +12340,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_801
+      name: glass_door_2
       rect:
         serializedVersion: 2
         x: 408
@@ -12354,7 +12354,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_802
+      name: glass_door_3
       rect:
         serializedVersion: 2
         x: 425
@@ -12368,7 +12368,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_803
+      name: glass_door_4
       rect:
         serializedVersion: 2
         x: 442
@@ -12382,7 +12382,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_804
+      name: glass_door_21
       rect:
         serializedVersion: 2
         x: 459
@@ -12396,7 +12396,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_805
+      name: glass_door_22
       rect:
         serializedVersion: 2
         x: 476
@@ -12410,7 +12410,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_806
+      name: glass_door_23
       rect:
         serializedVersion: 2
         x: 493
@@ -12424,7 +12424,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_807
+      name: glass_door_24
       rect:
         serializedVersion: 2
         x: 510
@@ -12844,7 +12844,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_837
+      name: glass_door_5
       rect:
         serializedVersion: 2
         x: 391
@@ -12858,7 +12858,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_838
+      name: glass_door_6
       rect:
         serializedVersion: 2
         x: 408
@@ -12872,7 +12872,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_839
+      name: glass_door_7
       rect:
         serializedVersion: 2
         x: 425
@@ -12886,7 +12886,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_840
+      name: glass_door_8
       rect:
         serializedVersion: 2
         x: 442
@@ -12900,7 +12900,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_841
+      name: glass_door_25
       rect:
         serializedVersion: 2
         x: 459
@@ -12914,7 +12914,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_842
+      name: glass_door_26
       rect:
         serializedVersion: 2
         x: 476
@@ -12928,7 +12928,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_843
+      name: glass_door_27
       rect:
         serializedVersion: 2
         x: 493
@@ -12942,7 +12942,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_844
+      name: glass_door_28
       rect:
         serializedVersion: 2
         x: 510
@@ -13362,7 +13362,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_874
+      name: glass_door_9
       rect:
         serializedVersion: 2
         x: 391
@@ -13376,7 +13376,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_875
+      name: glass_door_10
       rect:
         serializedVersion: 2
         x: 408
@@ -13390,7 +13390,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_876
+      name: glass_door_11
       rect:
         serializedVersion: 2
         x: 425
@@ -13404,7 +13404,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_877
+      name: glass_door_12
       rect:
         serializedVersion: 2
         x: 442
@@ -13418,7 +13418,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_878
+      name: glass_door_29
       rect:
         serializedVersion: 2
         x: 459
@@ -13432,7 +13432,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_879
+      name: glass_door_30
       rect:
         serializedVersion: 2
         x: 476
@@ -13446,7 +13446,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_880
+      name: glass_door_31
       rect:
         serializedVersion: 2
         x: 493
@@ -13460,7 +13460,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_881
+      name: glass_door_32
       rect:
         serializedVersion: 2
         x: 510
@@ -13880,7 +13880,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_911
+      name: glass_door_13
       rect:
         serializedVersion: 2
         x: 391
@@ -13894,7 +13894,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_912
+      name: glass_door_14
       rect:
         serializedVersion: 2
         x: 408
@@ -13908,7 +13908,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_913
+      name: glass_door_15
       rect:
         serializedVersion: 2
         x: 425
@@ -13922,7 +13922,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_914
+      name: glass_door_16
       rect:
         serializedVersion: 2
         x: 442
@@ -13936,7 +13936,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_915
+      name: glass_door_33
       rect:
         serializedVersion: 2
         x: 459
@@ -13950,7 +13950,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_916
+      name: glass_door_34
       rect:
         serializedVersion: 2
         x: 476
@@ -13964,7 +13964,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_917
+      name: glass_door_35
       rect:
         serializedVersion: 2
         x: 493
@@ -13978,7 +13978,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_918
+      name: glass_door_36
       rect:
         serializedVersion: 2
         x: 510
@@ -14398,7 +14398,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_948
+      name: glass_door_17
       rect:
         serializedVersion: 2
         x: 391
@@ -14412,7 +14412,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_949
+      name: glass_door_18
       rect:
         serializedVersion: 2
         x: 408
@@ -14426,7 +14426,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_950
+      name: glass_door_19
       rect:
         serializedVersion: 2
         x: 425
@@ -14440,7 +14440,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_951
+      name: glass_door_20
       rect:
         serializedVersion: 2
         x: 442
@@ -14454,7 +14454,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_952
+      name: glass_door_37
       rect:
         serializedVersion: 2
         x: 459
@@ -14468,7 +14468,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_953
+      name: glass_door_38
       rect:
         serializedVersion: 2
         x: 476
@@ -14482,7 +14482,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_954
+      name: glass_door_39
       rect:
         serializedVersion: 2
         x: 493
@@ -14496,7 +14496,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: roguelikeCity_magenta_955
+      name: glass_door_40
       rect:
         serializedVersion: 2
         x: 510
