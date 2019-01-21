@@ -7,7 +7,7 @@ public class BulletScript : MonoBehaviour {
     public Vector2 fireDirection;
     public Rigidbody2D bulletRb;
     public float speed = 15.0f;
-
+    //test
 	// Use this for initialization
 	void Start () {
         fireDirection = PlayerMoveTest.currentDirection;
